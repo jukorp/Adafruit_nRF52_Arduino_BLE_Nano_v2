@@ -25,10 +25,7 @@
 #include <nrf.h>
 
 #ifdef BLE_NANO_V2
-//#define BLE_NANO_V2
-//#endif
 
-//#ifdef defined(BLE_NANO_V2)
 const uint32_t g_ADigitalPinMap[] = {
     // D0 - D7
     0,  // xtal 1
