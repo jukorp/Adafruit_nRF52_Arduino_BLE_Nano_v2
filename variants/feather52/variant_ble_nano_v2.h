@@ -33,21 +33,21 @@ extern "C"
 {
 #endif // __cplusplus
     
-// Number of pins defined in PinDescription array
+    // Number of pins defined in PinDescription array
 #define PINS_COUNT           (32u)
-#define NUM_DIGITAL_PINS     (32u)
-#define NUM_ANALOG_INPUTS    (8u)
+#define NUM_DIGITAL_PINS     (12u)
+#define NUM_ANALOG_INPUTS    (6u)
 #define NUM_ANALOG_OUTPUTS   (0u)
     
     // LEDs
-#define PIN_LED1                (17)
-#define PIN_LED2                (19)
+#define PIN_LED1                (11)
+//#define PIN_LED2                (11)
     
 #define LED_BUILTIN             PIN_LED1
-#define LED_CONN                PIN_LED2
+#define LED_CONN                PIN_LED1 //PIN_LED2
     
 #define LED_RED                 PIN_LED1
-#define LED_BLUE                PIN_LED2
+//#define LED_BLUE                PIN_LED2
     
 #define LED_STATE_ON            1         // State when LED is litted
     
@@ -62,14 +62,39 @@ extern "C"
     /*
      * Analog pins
      */
-#define PIN_A0               (2)
-#define PIN_A1               (3)
-#define PIN_A2               (4)
-#define PIN_A3               (5)
-#define PIN_A4               (28)
-#define PIN_A5               (29)
-#define PIN_A6               (30)
-#define PIN_A7               (31)
+//#define D0  0
+//#define D1  1
+//#define D2  2
+//#define D3  3
+//#define D4  4
+//#define D5  5
+//#define D6  6
+//#define D7  7
+//#define D8  8
+//#define D9  9
+//#define D10 10
+//
+//#define D13 13
+//
+//#define A0  D0
+//#define A1  D1
+//#define A2  D2
+//#define A3  D3
+//#define A4  D5
+//#define A5  D4
+//
+//    // NFC
+//#define D14 14
+//#define D15 15
+
+#define PIN_A0               (30)
+#define PIN_A1               (29)
+#define PIN_A2               (28)
+#define PIN_A3               (2)
+#define PIN_A4               (5)
+#define PIN_A5               (4)
+//#define PIN_A6               (30)
+//#define PIN_A7               (31)
     
     static const uint8_t A0  = PIN_A0 ;
     static const uint8_t A1  = PIN_A1 ;
@@ -77,35 +102,35 @@ extern "C"
     static const uint8_t A3  = PIN_A3 ;
     static const uint8_t A4  = PIN_A4 ;
     static const uint8_t A5  = PIN_A5 ;
-    static const uint8_t A6  = PIN_A6 ;
-    static const uint8_t A7  = PIN_A7 ;
+    //static const uint8_t A6  = PIN_A6 ;
+    //static const uint8_t A7  = PIN_A7 ;
 #define ADC_RESOLUTION    14
     
     // Other pins
-#define PIN_AREF           (24)
-#define PIN_DFU            (20)
+//#define PIN_AREF           (24)
+//#define PIN_DFU            (20)
 #define PIN_NFC1           (9)
 #define PIN_NFC2           (10)
     
-    static const uint8_t AREF = PIN_AREF;
+//static const uint8_t AREF = PIN_AREF;
     
     /*
      * Serial interfaces
      */
     // Serial
-#define PIN_SERIAL_RX       (8)
-#define PIN_SERIAL_TX       (6)
+#define PIN_SERIAL_RX       (30)
+#define PIN_SERIAL_TX       (29)
     
     /*
      * SPI Interfaces
      */
 #define SPI_INTERFACES_COUNT 1
     
-#define PIN_SPI_MISO         (14)
-#define PIN_SPI_MOSI         (13)
-#define PIN_SPI_SCK          (12)
+#define PIN_SPI_MISO         (30)
+#define PIN_SPI_MOSI         (29)
+#define PIN_SPI_SCK          (2)
     
-    static const uint8_t SS   = 18 ;
+    static const uint8_t SS   = 28 ;
     static const uint8_t MOSI = PIN_SPI_MOSI ;
     static const uint8_t MISO = PIN_SPI_MISO ;
     static const uint8_t SCK  = PIN_SPI_SCK ;
@@ -115,8 +140,8 @@ extern "C"
      */
 #define WIRE_INTERFACES_COUNT 1
     
-#define PIN_WIRE_SDA         (25u)
-#define PIN_WIRE_SCL         (26u)
+#define PIN_WIRE_SDA         (28u)
+#define PIN_WIRE_SCL         (2u)
     
     
     static inline bool isPinValid(uint32_t pin)
@@ -136,11 +161,10 @@ extern "C"
 }
 #endif
 
-//#endif //FEATHER52
-
 /*----------------------------------------------------------------------------
  *        Arduino objects - C++ only
  *----------------------------------------------------------------------------*/
 
 #endif
+
 

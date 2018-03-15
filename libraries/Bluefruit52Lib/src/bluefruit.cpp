@@ -35,6 +35,7 @@
 /**************************************************************************/
 
 #include "bluefruit.h"
+
 #include <Nffs.h>
 
 #define SVC_CONTEXT_FLAG                 (BLE_GATTS_SYS_ATTR_FLAG_SYS_SRVCS | BLE_GATTS_SYS_ATTR_FLAG_USR_SRVCS)
@@ -77,7 +78,7 @@ void _adafruit_save_bond_key_dfr(uint32_t conn_handle);
 static void bluefruit_blinky_cb( TimerHandle_t xTimer )
 {
   (void) xTimer;
-  ledToggle(LED_BLUE);
+  //ledToggle(LED_BLUE);
 }
 
 
@@ -1108,7 +1109,7 @@ void AdafruitBluefruit::_setConnLed (bool on_off)
 {
   if (_led_conn)
   {
-    digitalWrite(LED_BLUE, on_off ? LED_STATE_ON : (1-LED_STATE_ON) );
+    //digitalWrite(LED_BLUE, on_off ? LED_STATE_ON : (1-LED_STATE_ON) );
   }
 }
 
