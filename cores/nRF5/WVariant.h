@@ -28,7 +28,6 @@
 extern "C" {
 #endif
 
-
 extern const uint32_t g_ADigitalPinMap[] ;
 
 #ifdef __cplusplus

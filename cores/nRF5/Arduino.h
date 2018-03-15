@@ -71,17 +71,7 @@ uint32_t setLoopStacksize(void);
 #endif
 
 // Include board variant
-#include "sdk_config.h"
-#ifdef defined(FEATHER52)
-    #include "variant.h"
-#elif defined(BLE_NANO_V2)
-    #include "variant_ble_nano_v2.h"
-#elif defined(EYSHSNZWZ)
-    #include "variant_eyshsnzwz.h"
-#else
-#error "Board is not defined"
-
-#endif
+#include "variant.h"
 
 #include "wiring.h"
 #include "wiring_digital.h"
