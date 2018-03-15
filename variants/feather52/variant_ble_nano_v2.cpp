@@ -25,7 +25,10 @@
 #include <nrf.h>
 
 #ifdef BLE_NANO_V2
+//#define BLE_NANO_V2
+//#endif
 
+//#ifdef defined(BLE_NANO_V2)
 const uint32_t g_ADigitalPinMap[] = {
     // D0 - D7
     0,  // xtal 1
@@ -45,30 +48,30 @@ const uint32_t g_ADigitalPinMap[] = {
 
     11, // GPIO11
 
-    //12, // SCK
-    //13, // MOSI
-    //14, // MISO
+    12, // SCK
+    13, // MOSI
+    14, // MISO
 
-    //15, // GPIO #15
-    //16, // GPIO #16
+    15, // GPIO #15
+    16, // GPIO #16
 
     // function set pins
-    //17, // LED #1 (red)
+    17, // LED #1 (red)
     18, // SWO
-    //19, // LED #2 (blue)
-    //20, // DFU
+    19, // LED #2 (blue)
+    20, // DFU
     21, // Reset
-    //22, // Factory Reset
-    //23, // N/A
-    //24, // N/A
+    22, // Factory Reset
+    23, // N/A
+    24, // N/A
 
-    //25, // SDA
-    //26, // SCL
-    //27, // GPIO #27
+    25, // SDA
+    26, // SCL
+    27, // GPIO #27
     28, // A4
     29, // A5
     30, // A6
-    //  31, // A7
+    31, // A7
 
 };
 
@@ -76,8 +79,8 @@ void initVariant()
 {
   pinMode(PIN_LED1, OUTPUT);
   ledOff(PIN_LED1);
-  pinMode(PIN_LED2, OUTPUT);
-  ledOff(PIN_LED2);
+  //pinMode(PIN_LED2, OUTPUT);
+  //ledOff(PIN_LED2);
 }
 
 #endif

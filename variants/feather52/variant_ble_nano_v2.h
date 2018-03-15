@@ -34,20 +34,20 @@ extern "C"
 #endif // __cplusplus
     
     // Number of pins defined in PinDescription array
-#define PINS_COUNT           (17u)
-#define NUM_DIGITAL_PINS     (17u)
+#define PINS_COUNT           (32u)
+#define NUM_DIGITAL_PINS     (12u)
 #define NUM_ANALOG_INPUTS    (6u)
 #define NUM_ANALOG_OUTPUTS   (0u)
     
     // LEDs
 #define PIN_LED1                (11)
-#define PIN_LED2                (11)
+//#define PIN_LED2                (11)
     
 #define LED_BUILTIN             PIN_LED1
-#define LED_CONN                PIN_LED2
+#define LED_CONN                PIN_LED1 //PIN_LED2
     
 #define LED_RED                 PIN_LED1
-#define LED_BLUE                PIN_LED2
+//#define LED_BLUE                PIN_LED2
     
 #define LED_STATE_ON            1         // State when LED is litted
     
@@ -62,6 +62,31 @@ extern "C"
     /*
      * Analog pins
      */
+//#define D0  0
+//#define D1  1
+//#define D2  2
+//#define D3  3
+//#define D4  4
+//#define D5  5
+//#define D6  6
+//#define D7  7
+//#define D8  8
+//#define D9  9
+//#define D10 10
+//
+//#define D13 13
+//
+//#define A0  D0
+//#define A1  D1
+//#define A2  D2
+//#define A3  D3
+//#define A4  D5
+//#define A5  D4
+//
+//    // NFC
+//#define D14 14
+//#define D15 15
+
 #define PIN_A0               (30)
 #define PIN_A1               (29)
 #define PIN_A2               (28)
@@ -82,12 +107,12 @@ extern "C"
 #define ADC_RESOLUTION    14
     
     // Other pins
-#define PIN_AREF           (24)
-#define PIN_DFU            (20)
+//#define PIN_AREF           (24)
+//#define PIN_DFU            (20)
 #define PIN_NFC1           (9)
 #define PIN_NFC2           (10)
     
-    static const uint8_t AREF = PIN_AREF;
+//static const uint8_t AREF = PIN_AREF;
     
     /*
      * Serial interfaces
